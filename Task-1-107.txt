@@ -1,0 +1,43 @@
+1.  <line 131-167>, <Long method> processOrder method has too many responsibilities
+
+
+2. <entire inventorySystem class>, <Long class>  violates SRP as it deals with product, order, calculation , report everything at once
+
+
+3.<line 10-50>, <primitive obsession> use of int, String and double for product, order etc.
+
+
+4. <line 41>, <Long parameter list> addProduct method takes 7 parameters 
+
+
+5. <OrderItem and Product class>, <Alternative classes with different interfaces> both classes use same value of id, quantity and price so they should be derived from same parent 
+
+
+6. <line 78-98>, <switch statement> creating complexity by using switch case 
+
+
+7. <calculateFinalPrice method>, <Shotgun surgery> if we add new discount type, it will take way too many alterations to fix 
+
+
+8. <calculateFinalPrice method>, <Duplicate code> the calculations are literally the same but have been repeated 
+
+
+9. <calculateFinalPrice method>, <Magic number> what the numbers like 100, 0.85, 0.95, 0.8 etc indicate are not clear
+
+
+10. <Warehouse class>, <Lazy class> this class does not seem to have any responsibility 
+
+
+11. <ProcessOrder method>, <Feature envy> this method is inside Order class but keeps using attributes of Product and OrderItem class
+
+
+12. <line 140>, <Message Chain> Product product = globalInventoryData.products.get(productIds.get(i));
+
+
+13.< line 157,158>, <Middle man> globalInventoryData is used for forwarding data 
+
+
+14. <inventorySystem and globalInventoryData class>, <tight coupling> these classes are dependent on each other for managing product, order and warehouses. 
+
+
+15. <Product class and Order class>, <data class> these classes have no responsibility. only attributes. 
